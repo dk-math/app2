@@ -2,12 +2,14 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <header>
+    <div class="content">
+      <header>
         <div class="headerLogo">
-          <h1>映画<span>GO</span></h1>
+          <p>映画<span>GO</span></p>
         </div>
         <div class="headerSign">
           <div class="signIn">
@@ -17,6 +19,18 @@
             <a>新規登録</a>
           </div>
         </div>
-    </header>
+      </header>
+
+      <main>
+        <div class="searchMovie">
+          <h1>日本一シンプルな映画検索サイト</h1>
+          <p>見たい映画がどこの映画館で上映しているかすぐわかる!</p>
+          <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+          </form>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
