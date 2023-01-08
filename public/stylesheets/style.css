@@ -1,8 +1,42 @@
+/* * {
+  outline: 2px red solid;
+} */
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background-color: #232946;
+  color: #fffffe;
+  display: block;
 }
 
-a {
-  color: #00B7FF;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogo h1 span {
+  color: #eebbc3;
+}
+
+.headerSign {
+  display: flex;
+  font-weight: bold;
+}
+
+.signIn {
+  cursor: pointer;
+  padding: 2px 0;
+  align-items: center;
+}
+
+.signUp {
+  cursor: pointer;
+  text-align: center;
+  margin-left: 28px;
+  padding: 2px 12px;
+  color: #232946;
+  background-color: #eebbc3;
+  border-radius: 2px;
 }
