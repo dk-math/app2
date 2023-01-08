@@ -1,15 +1,24 @@
-/* * {
-  outline: 2px red solid;
-} */
+* {
+  /* outline: 2px red solid; */
+  margin: 0;
+  padding: 0;
+}
 
 body {
   box-sizing: border-box;
   background-color: #232946;
   color: #fffffe;
   display: block;
+  height: 100%;
 }
 
 header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,8 +57,23 @@ header {
   border-radius: 2px;
 }
 
+main {
+  margin-top: 8vh;
+  padding-top: 200px;
+  padding-bottom: 240px;
+}
+
 .searchMovie {
   padding: 0 80px;
+}
+
+.searchMovie h1 {
+  font-size: 48px;
+}
+
+.searchMovie p {
+  font-size: 18px;
+  margin-bottom: 4vh;
 }
 
 .search_container {
@@ -84,4 +108,38 @@ header {
   font-size: 18px;
   color: #232946;
   outline: none;
+}
+
+footer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  margin: 0 auto;
+  padding: 0 80px;
+  font-size: 18px;
+  background-color: #121629;
+  width: 100%;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.footerLogo {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.footerLogo p span {
+  color: #eebbc3;
+}
+
+.footerTwitter {
+  margin-left: 8px;
+}
+
+.fa-twitter {
+  font-size: 20px;
+  color: #1DA1F2;
 }

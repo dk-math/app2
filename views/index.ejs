@@ -2,8 +2,8 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://kit.fontawesome.com/831a884b90.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="content">
@@ -26,11 +26,20 @@
           <h1>日本一シンプルな映画検索サイト</h1>
           <p>見たい映画がどこの映画館で上映しているかすぐわかる!</p>
           <form method="get" action="#" class="search_container">
-            <input type="text" size="25" placeholder="キーワード検索">
-            <input type="submit" value="&#xf002">
+            <input type="text" size="25" placeholder="作品、監督、俳優 を入力">
+            <input type="submit" value="&#xf002" class="fa-solid fa-magnifying-glass">
           </form>
         </div>
       </main>
+
+      <footer>
+        <div class="footerLogo">
+          <p>映画<span>GO</span></p>
+        </div>
+        <div class="footerTwitter">
+          <p><a><i class="fa-brands fa-twitter"></i></a></p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
