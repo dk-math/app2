@@ -85,8 +85,7 @@ main {
   top: 8vh;
   left: 0;
   box-sizing: border-box;
-  padding-top: 200px;
-  padding-bottom: 240px;
+  padding-top: 27vh;
   height: 81vh;
   width: 100vw;
   pointer-events:none;
