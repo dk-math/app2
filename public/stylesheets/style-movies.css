@@ -32,6 +32,11 @@ header {
   font-weight: bold;
 }
 
+.headerLogo a {
+  text-decoration: none;
+  color: #fffffe;
+}
+
 .headerLogo p span {
   color: #eebbc3;
 }
@@ -140,6 +145,11 @@ footer {
 .footerLogo {
   font-weight: bold;
   margin-right: 8px;
+}
+
+.footerLogo a {
+  text-decoration: none;
+  color: #fffffe;
 }
 
 .footerLogo p span {
