@@ -12,6 +12,29 @@ body {
   height: 100%;
 }
 
+.backGround {
+  margin-top: 8vh;
+  height: 81vh;
+  overflow: scroll;
+}
+
+.backGround::before {
+  content: '';
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.backImg {
+  display: block;
+  float: left;
+  height: 27vh;
+  width: 10vw;
+}
+
 header {
   box-sizing: border-box;
   position: fixed;
@@ -58,9 +81,15 @@ header {
 }
 
 main {
-  margin-top: 8vh;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  box-sizing: border-box;
   padding-top: 200px;
   padding-bottom: 240px;
+  height: 81vh;
+  width: 100vw;
+  pointer-events:none;
 }
 
 .searchMovie {
@@ -72,7 +101,7 @@ main {
 }
 
 .searchMovie p {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 4vh;
 }
 
@@ -86,6 +115,7 @@ main {
   height: 3.6em;
   width: 100%;
   overflow: hidden;
+  pointer-events: fill;
 }
 
 .search_container input[type="text"] {
@@ -116,14 +146,14 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 10vh;
+  height: 11vh;
   margin: 0 auto;
   padding: 0 80px;
   font-size: 18px;
-  background-color: #121629;
+  background-color: #000000;
   width: 100%;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  position: absolute;
+  bottom: 0;
 }
 
 .footerLogo {
