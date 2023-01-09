@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style-index.css' />
+    <link rel='stylesheet' href='/stylesheets/style-movies.css' />
     <script src="https://kit.fontawesome.com/<%= fontawesomeApiKey %>.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -21,22 +21,13 @@
         </div>
       </header>
 
-      <div class="backGround">
-        <% for (let i = 0; i <= movies.length - 1 ;i++) { %>
-          <% if (movies[i].poster_path.length > 0) { %>
-            <img class="backImg" src="https://image.tmdb.org/t/p/w500<%= movies[i].poster_path %>">
-          <% } %>
-        <% } %>
-      </div>
-
       <main>
-        <div class="searchMovie">
-          <h1>日本一シンプルな映画検索サイト</h1>
-          <p>見たい映画がどこの映画館で上映しているかすぐわかる!</p>
-          <form method="get" action="/movies" class="searchContainer">
-            <input name="keyword" type="text" placeholder="作品、監督、俳優 を入力">
-            <input type="submit" value="&#xf002" class="fa-solid fa-magnifying-glass">
-          </form>
+        <div class="backGround">
+          <% for (let i = 0; i <= movies.length - 1 ;i++) { %>
+            <% if (movies[i].poster_path.length > 0) { %>
+              <img class="backImg" src="https://image.tmdb.org/t/p/w500<%= movies[i].poster_path %>">
+            <% } %>
+          <% } %>
         </div>
       </main>
 
