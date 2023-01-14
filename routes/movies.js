@@ -18,6 +18,7 @@ router.get('/' ,function(req, res, next) {
         const data = {
           title: "映画GO",
           movies: result.results,
+          keyword: keyword,
           fontawesomeApiKey: fontawesomeApiKey
         }
         res.render('movies', data);
