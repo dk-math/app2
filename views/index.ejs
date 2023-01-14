@@ -23,7 +23,7 @@
 
       <div class="backGround">
         <% for (let i = 0; i <= movies.length - 1 ;i++) { %>
-          <% if (movies[i].poster_path.length > 0) { %>
+          <% if (movies[i].poster_path != null) { %>
             <img class="backImg" src="https://image.tmdb.org/t/p/w500<%= movies[i].poster_path %>">
           <% } %>
         <% } %>
