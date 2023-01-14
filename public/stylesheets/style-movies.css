@@ -13,10 +13,9 @@ body {
 }
 
 header {
-  box-sizing: border-box;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
+  box-sizing: border-box;
   width: 100vw;
   height: 8vh;
   display: flex;
@@ -65,7 +64,6 @@ header {
 
 main {
   box-sizing: border-box;
-  margin-top: 8vh;
   width: 100vw;
   padding-top: 2vh;
   padding-left: 6vw;
@@ -139,8 +137,6 @@ footer {
   font-size: 20px;
   background-color: #000000;
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
 }
 
 .footerLogo {
