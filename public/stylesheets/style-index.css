@@ -46,7 +46,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 6vw;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #232946;
   border-bottom: solid #fffffe;
 }
@@ -155,7 +155,7 @@ footer {
   height: 11vh;
   margin: 0 auto;
   padding: 0 6vw;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #000000;
   width: 100%;
   position: absolute;
