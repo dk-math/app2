@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style-movies.css' />
+    <script src="https://kit.fontawesome.com/<%= fontawesomeApiKey %>.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <div class="headerLogo">
+          <a href="/"><p>映画<span>GO</span></p></a>
+        </div>
+        <div class="headerSign">
+          <div class="signIn">
+            <a>ログイン</a>
+          </div>
+          <div class="btn signUp">
+            <a>新規登録</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="subject">
+          <h1>作品一覧</h1>
+          <p>"<%= keyword %>" の検索結果を表示中</p>
+        </div>
+
+        <ul class="movies">
+          <% for (let i = 0; i <= movies.length - 1 ;i++) { %>
+            <% if (movies[i].poster_path != undefined) { %>
+              <li class="movie">
+                <div>
+                  <img class="moviePoster" src="https://image.tmdb.org/t/p/w500<%= movies[i].poster_path %>">
+                  <div  class="theaterBtn">
+                    <a>映画館へ</a>
+                  </div>
+                  <div class="movieTitle">
+                    <p>スラムダンク</p>
+                  </div>
+                  <div class="movieReleaseDate">
+                    <p>2022年12月1日〜</p>
+                  </div>
+                </div>
+              </li>
+            <% } %>
+          <% } %>
+        </ul>
+      </main>
+
+
+      <footer>
+        <div class="footerLogo">
+          <a href="/"><p>映画<span>GO</span></p></a>
+        </div>
+        <div class="footerTwitter">
+          <p><a><i class="fa-brands fa-twitter"></i></a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
