@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 require('dotenv').config();
 
-router.get('/' ,function(req, res, next) {
+router.get('/' , (req, res, next) => {
     let keyword = req.query.keyword;
     const movieApiKey = process.env.TMDB_API_KEY;
     const fontawesomeApiKey = process.env.FONTAWESOME_API_KEY;
@@ -28,5 +28,9 @@ router.get('/' ,function(req, res, next) {
       });
   
   });
+
+  router.get('/detail', (req, res, next) => {
+    
+  })
 
   module.exports = router;

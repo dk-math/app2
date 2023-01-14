@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 require('dotenv').config();
 
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   const movieApiKey = process.env.TMDB_API_KEY;
   const fontawesomeApiKey = process.env.FONTAWESOME_API_KEY;
   const url1 = `https://api.themoviedb.org/3/movie/now_playing?api_key=${movieApiKey}&language=ja&region=JP&page=1`;
