@@ -45,6 +45,7 @@ header {
   font-size: 20px;
   background-color: #232946;
   border-bottom: solid #fffffe;
+  z-index: 999;
 }
 
 .headerLogo {

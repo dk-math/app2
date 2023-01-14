@@ -25,6 +25,7 @@ header {
   font-size: 20px;
   background-color: #232946;
   border-bottom: solid #fffffe;
+  z-index: 999;
 }
 
 .headerLogo {
@@ -90,17 +91,33 @@ main {
   list-style-type: none;
   width: calc((100% / 5) - 8vw / 5);
   margin: 2vh 0 4vh 2vw;
+  transition: all 0.2s ease 0s;
 }
 
 .movie:nth-child(5n + 1) {
   margin-left: 0;
 }
 
+.movie:hover {
+  border-radius: 4px;
+  background: #232946;
+  box-shadow:  20px 20px 60px #0e101c;
+}
+
 .moviePoster {
+  overflow: hidden;
+}
+
+.moviePosterImg {
   width: 100%;
   height: 40vh;
   border-radius: 2px 2px 0 0;
   vertical-align: bottom;
+  transition: all 0.5s ease 0s;
+}
+
+.movie:hover .moviePosterImg {
+  transform: scale(1.1);
 }
 
 .theaterBtn {
@@ -118,11 +135,21 @@ main {
   font-weight: bold;
   margin-top: 4px;
   font-size: 20px;
+  transition: all 0.2s ease 0s;
 }
 
 .movieReleaseDate {
   display: block;
   font-size: 14px;
+  transition: all 0.2s ease 0s;
+}
+
+.movie:hover .movieTitle {
+  padding: 4px 4px 0 4px;
+}
+
+.movie:hover .movieReleaseDate {
+  padding: 4px 4px 0 4px;
 }
 
 footer {
