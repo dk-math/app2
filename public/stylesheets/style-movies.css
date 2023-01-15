@@ -130,12 +130,26 @@ main {
   border-radius: 0 0 2px 2px;
 }
 
+.theaterBtn:hover {
+  background-color: #000000;
+  color: #fffffe;
+}
+
 .movieTitle {
   display: block;
   font-weight: bold;
   margin-top: 4px;
   font-size: 20px;
   transition: all 0.2s ease 0s;
+}
+
+.movieTitle p a {
+  text-decoration: none;
+  color: #fffffe;
+}
+
+.movieTitle p a:hover {
+  color: #b8c1ec;
 }
 
 .movieReleaseDate {
