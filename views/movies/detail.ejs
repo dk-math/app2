@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style-detail.css' />
+    <script type="text/javascript" src="./javascripts/footerFixed.js"></script>
     <script src="https://kit.fontawesome.com/831a884b90.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -35,12 +36,33 @@
             </div>
           </div>
           <div class="detailRight">
-            <h2><%= movie.title %></h2>
-            <p><%= movie.tagline %></p>
-            <p><%= movie.release_date %></p>
-            <p><%= movie.popularity %></p>
-            <p>概要</p>
-            <p><%= movie.overview %></p>
+            <h2 class="movieTitle"><%= movie.title %></h2>
+            <p class="movieTagline"><%= movie.tagline %></p>
+            <p class="movieReleaseDate"><%= movie.release_date %></p>
+
+
+            <div class="movieScore">
+              <div id="pie-chart">
+                <div class="pie-chart-wrap">
+                  <div class="box blue">
+                    <div class="percent">
+                      <svg>
+                        <circle class="base" cx="75" cy="75" r="50"></circle>
+                        <circle class="line" cx="75" cy="75" r="50"></circle>
+                      </svg>
+                      <div class="number">
+                        <h3 class="title"><%= Math.floor(movie.vote_average * 10) %><span>%</span></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>ユーザースコア</p>
+            </div>
+
+
+            <p class="movieOverviewTitle">概要</p>
+            <p class="movieOverview"><%= movie.overview %></p>
           </div>
         </div>
         <div class="director">
@@ -59,7 +81,7 @@
         </div>
       </main>
 
-      <footer>
+      <footer id="footer">
         <div class="footerLogo">
           <a href="/"><p>映画<span>GO</span></p></a>
         </div>
