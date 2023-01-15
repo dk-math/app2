@@ -66,6 +66,7 @@ header {
 main {
   box-sizing: border-box;
   width: 100vw;
+  margin-bottom: 4vh;
   padding-top: 2vh;
   padding-left: 6vw;
   padding-right: 6vw;

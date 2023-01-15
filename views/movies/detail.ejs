@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style-movies.css' />
+    <link rel='stylesheet' href='/stylesheets/style-detail.css' />
     <script src="https://kit.fontawesome.com/831a884b90.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -24,10 +24,38 @@
       <main>
         <div class="subject">
           <h1>作品紹介</h1>
-          <div class="movie">
-            <%= movie.id %>
-            <img class="moviePoster" src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>">
+        </div>
+        <div class="detail">
+          <div class="detailLeft">
+            <div class="moviePoster">
+              <img class="moviePosterImg" src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>">
+            </div>
+            <div  class="theaterBtn">
+              <a>映画館へ</a>
+            </div>
           </div>
+          <div class="detailRight">
+            <h2><%= movie.title %></h2>
+            <p><%= movie.tagline %></p>
+            <p><%= movie.release_date %></p>
+            <p><%= movie.popularity %></p>
+            <p>概要</p>
+            <p><%= movie.overview %></p>
+          </div>
+        </div>
+        <div class="director">
+          <h1>監督</h1>
+          <% for (let i=0; i<= credits.crew.length - 1; i++) { %>
+          <% if (credits.crew[i].job == "Director") { %>
+          <%= credits.crew[i].name %>
+          <% } %>
+          <% } %>
+        </div>
+        <div class="cast">
+          <h1>出演者</h1>
+          <% for (let i=0; i<= credits.cast.length - 1; i++) { %>
+          <%= credits.cast[i].name %>
+          <% } %>
         </div>
       </main>
 

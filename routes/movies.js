@@ -30,17 +30,22 @@ router.get('/' , (req, res, next) => {
   router.get('/detail/:id', (req, res, next) => {
     let id = req.params.id;
     const movieApiKey = process.env.TMDB_API_KEY;
-    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${movieApiKey}&language=ja`;
-    fetch(url)
+    const data = {};
+    const url1 = `https://api.themoviedb.org/3/movie/${id}?api_key=${movieApiKey}&language=ja`;
+    const url2 = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${movieApiKey}&language=ja`;
+    fetch(url1)
       .then(res => {
         return res.json();
       })
       .then(result => {
-        const data = {
-          title: "映画GO",
-          movie: result,
-        }
-        console.log(data.movie);
+        data.title = "映画GO";
+        data.movie = result;
+        return fetch(url2);
+      })
+      .then(res => {
+        return res.json();
+      }).then(result => {
+        data.credits = result; 
         res.render('movies/detail', data);
       })
       .catch(err => {
