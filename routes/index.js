@@ -5,7 +5,6 @@ require('dotenv').config();
 
 router.get('/', (req, res, next) => {
   const movieApiKey = process.env.TMDB_API_KEY;
-  const fontawesomeApiKey = process.env.FONTAWESOME_API_KEY;
   const url1 = `https://api.themoviedb.org/3/movie/now_playing?api_key=${movieApiKey}&language=ja&region=JP&page=1`;
   const url2 = `https://api.themoviedb.org/3/movie/now_playing?api_key=${movieApiKey}&language=ja&resion=JP&page=2`;
   const url3 = `https://api.themoviedb.org/3/movie/now_playing?api_key=${movieApiKey}&language=ja&resion=JP&page=3`;
@@ -48,8 +47,7 @@ router.get('/', (req, res, next) => {
     movieList = movieList.concat(result.results);
     const data = {
       title: "映画GO",
-      movies: movieList,
-      fontawesomeApiKey: fontawesomeApiKey
+      movies: movieList
     };
     res.render('index', data)
   })

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style-movies.css' />
+    <script src="https://kit.fontawesome.com/831a884b90.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <div class="headerLogo">
+          <a href="/"><p>映画<span>GO</span></p></a>
+        </div>
+        <div class="headerSign">
+          <div class="signIn">
+            <a>ログイン</a>
+          </div>
+          <div class="btn signUp">
+            <a>新規登録</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="subject">
+          <h1>作品紹介</h1>
+          <div class="movie">
+            <%= movie.id %>
+            <img class="moviePoster" src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>">
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footerLogo">
+          <a href="/"><p>映画<span>GO</span></p></a>
+        </div>
+        <div class="footerTwitter">
+          <p><a><i class="fa-brands fa-twitter"></i></a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
