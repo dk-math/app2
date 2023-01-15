@@ -211,19 +211,22 @@ main {
   -webkit-animation: circleAnim 1s forwards;
           animation: circleAnim 1s forwards;
 }
-.box.blue .percent .line {
-  stroke-dashoffset: 100;
-  stroke: #03a9f4;
+
+.box.green .percent .line {
+  /* stroke-dashoffset: 10; */
+  stroke: #1fd26c;
 }
+
+.box.yellow .percent .line {
+  stroke-dashoffset: 100;
+  stroke: #ffd400;
+}
+
 .box.red .percent .line {
   stroke-dashoffset: 154;
   stroke: #ff3051;
 }
-.box.green .percent .line {
-  stroke-dashoffset: 321.2;
-  stroke: #1fd26c;
-}
- 
+  
 @-webkit-keyframes circleAnim {
   0% {
     stroke-dasharray: 0 314;
@@ -250,6 +253,8 @@ main {
 
 .movieOverview {
   margin-top: 1vh;
+  overflow: scroll;
+  height: 18vh;
 }
 
 .detailRight {
