@@ -38,7 +38,9 @@
           <div class="detailRight">
             <h2 class="movieTitle"><%= movie.title %></h2>
             <p class="movieTagline"><%= movie.tagline %></p>
-            <p class="movieReleaseDate"><%= movie.release_date %></p>
+            <% let hour = Math.floor(movie.runtime / 60) %>
+            <% let minute = movie.runtime % 60 %>
+            <p class="movieReleaseDate"><%= movie.release_date %><span class="movieRuntime"><%= hour+"時間" + " " + minute+"分" %></span></p>
 
 
             <div class="movieScore">
@@ -60,9 +62,10 @@
               <p>ユーザースコア</p>
             </div>
 
-
+            <% if (movie.overview != "") { %>
             <p class="movieOverviewTitle">概要</p>
             <p class="movieOverview"><%= movie.overview %></p>
+            <% } %>
           </div>
         </div>
         <div class="director">

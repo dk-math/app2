@@ -123,7 +123,11 @@ main {
 }
 
 .movieReleaseDate {
-  margin-top: 2vh;
+  margin-top: 1vh;
+}
+
+.movieRuntime {
+  margin-left: 2vw;
 }
 
 .movieScore {
