@@ -46,7 +46,15 @@
             <div class="movieScore">
               <div id="pie-chart">
                 <div class="pie-chart-wrap">
-                  <div class="box blue">
+                  <% let colorClass; %>
+                  <% if (movie.vote_average >= 7.5) { %>
+                  <% colorClass = "green" %>
+                  <% } else if (movie.vote_average >= 5.0) { %>
+                  <% colorClass = "yellow" %>
+                  <% } else { %>
+                  <% colorClass = "red" %>
+                  <% } %>
+                  <div class="box <%= colorClass %>">
                     <div class="percent">
                       <svg>
                         <circle class="base" cx="75" cy="75" r="50"></circle>
@@ -93,5 +101,8 @@
         </div>
       </footer>
     </div>
+    <script>
+      var line
+    </script>
   </body>
 </html>
